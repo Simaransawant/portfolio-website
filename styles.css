@@ -1,0 +1,182 @@
+/* Set the background image for the whole body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    
+  }
+  
+  .main {
+    background-image: url('img/smoke-is-flying-air-against-black-background_994023-515834.jpg'); /* Use your image path */
+    background-size: cover; /* Ensure background image covers the whole area */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white; /* Text color for readability */
+  }
+
+  .navbar .nav-link.active {
+    color: rgb(61, 181, 228) !important; /* Change to your preferred active color */
+    font-weight: bold; /* Optional */
+   
+}
+
+
+  /* Hero section */
+  #hero {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color for readability */
+  }
+  #hero h1{
+  font-family:serif ;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays above other content */
+    background-color: transparent !important; /* Start with a transparent background */
+    transition: background-color 0.3s ease !important; /* Smooth transition for background on scroll */
+  }
+  
+  /* Add background color when scrolling */
+  nav.scrolled {
+    background-color: rgba(4, 4, 4, 0.8) !important; /* Change to a dark semi-transparent background */
+  }
+  
+  /* Navbar hover effect */
+  .nav-link {
+    position: relative;
+    color: white !important;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+
+  
+  
+  /* Underline hover effect */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color:rgb(61, 181, 228) ;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  /* Expand underline on hover */
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover {
+    color:rgb(61, 181, 228)  !important; /* Change text color on hover */
+  }
+  
+  /* Social icon hover effect */
+  .social-icons .btn {
+    background-color: rgb(35, 35, 35);
+    color: white;
+ 
+
+  }
+  
+  .social-icons .btn:hover {
+    background-color: rgb(61, 181, 228) ;
+    color: black;
+    border-color:rgb(61, 181, 228) ;
+    
+
+  }
+  
+  .social-icons .btn i {
+    font-size: 15px;
+  }
+  .text-animation {
+    position: relative; /* Allow positioning */
+    transform: translateX(100%); /* Start off the right side of the screen */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+  }
+  
+  /* Style for when the animation class is added */
+  [data-aos].aos-animate {
+    transform: translateX(0); /* Move to its original position */
+    opacity: 1; /* Make it visible */
+  }
+  /* Typed text */
+  .typed-container {
+    display: inline-block; /* Keep it inline */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow text */
+    border-bottom: 3px solid rgb(61, 181, 228) ;
+    text-decoration-color: rgb(61, 181, 228) ; 
+    text-underline-offset: 10px;
+    vertical-align: bottom; /* Align with other text */
+  }
+  
+  /* Cursor style */
+  
+  .typed-cursor {
+   
+    animation: blink 1s step-end infinite; /* Blinking effect */
+    color:  rgb(61, 181, 228)  !important;
+  }
+
+
+
+  @keyframes blink {
+    50% {
+      opacity: 0; /* Blinking effect */
+    }
+  }
+  
+  /* Main text alignment */
+  .main-text {
+    font-size: 1.5rem; /* Font size */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center !important; /* Center align items */
+    margin: 0; /* Ensure no extra margin */
+    justify-content: center;
+    /* margin-left: 450px; */
+    /* margin-right: 300px; */
+  }
+  
+  /* Optional: Adjust the space between "I'm a" and the typed text */
+  .static-text {
+    margin-right: 0.2em; /* Add some space between static text and typed text */
+  }
+  
+  .social_icon .btn:hover {
+    background-color: aqua !important;
+     border-color:skyblue;
+  }
+ 
+ 
+.custom-cursor {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  /* background-color: skyblue; */
+  border-radius: 50%;
+  pointer-events: none; /* Allow clicks to pass through */
+  z-index: 9999;
+}
+
+.particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: skyblue;
+  pointer-events: none;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}

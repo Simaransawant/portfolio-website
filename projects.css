@@ -1,0 +1,105 @@
+/* Set the background image for the whole body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  .navbar .nav-link.active {
+    color: rgb(61, 181, 228) !important; /* Change to your preferred active color */
+    font-weight: bold; /* Optional */
+   
+}
+
+  .main {
+    background-color: black;
+    color: white; /* Text color for readability */
+  }
+  
+  .nav-link {
+    padding: 0 10px; /* Optional: Adjust padding for links */
+  }
+  
+  
+  /* Navbar hover effect */
+  .nav-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Underline hover effect */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(61, 181, 228);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  /* Expand underline on hover */
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover {
+    color: rgb(61, 181, 228) !important; /* Change text color on hover */
+  }
+  .nav-links {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+ 
+  .social_icon .btn:hover {
+    background-color: aqua !important;
+    color: white;
+    border-color:skyblue;
+  }
+ 
+
+  .project-img {
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    height: 100%;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+/* Card styling */
+.project-card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-title {
+    color: #333;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555;
+}
+
+.text-work{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px; /* Adjusts space between text and underline */
+}
+
+.text-work::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px; /* Adjusts the space between underline and text */
+  width: 60%; /* Adjust width as needed */
+  height: 3px; /* Thickness of the underline */
+  background-color: skyblue; /* Sky blue color for the underline */
+}

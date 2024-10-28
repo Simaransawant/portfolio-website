@@ -1,0 +1,192 @@
+/* Set the background image for the whole body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  
+  .main {
+    background-color: black;
+    color: white; /* Text color for readability */
+  }
+  .navbar .nav-link.active {
+    color: rgb(61, 181, 228) !important; /* Change to your preferred active color */
+    font-weight: bold; /* Optional */
+   
+}
+
+  .nav-link {
+    padding: 0 10px; /* Optional: Adjust padding for links */
+  }
+  
+  
+  /* Navbar hover effect */
+  .nav-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Underline hover effect */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(61, 181, 228);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  /* Expand underline on hover */
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover {
+    color: rgb(61, 181, 228); /* Change text color on hover */
+  }
+  .nav-links {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  .social_icon .btn:hover {
+    background-color: aqua !important;
+    color: white;
+    border-color:skyblue;
+  }
+  .socialIcon .btn {
+    background-color:rgb(61, 181, 228);
+    color: white;
+  }
+  .socialIcon .btn:hover {
+    background-color: aqua !important;
+    color: white;
+    border-color:rgb(61, 181, 228);
+  }
+  .modal-content {
+    background-color: black; /* Ensure modal background is black */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Add box shadow */
+}
+
+#modalMessage {
+    color: rgb(61, 181, 228); /* Set text color to green */
+}
+
+/* Optional: If you want the header text to be green as well */
+.modal-header h5 {
+    color: rgb(61, 181, 228); /* Set header text color to green */
+}
+
+/* Form elements */
+.form-control {
+    background-color: #000000 !important;
+    color: white !important;
+    
+    border-radius: 4px !important;
+}
+/* Hover effect for form controls */
+
+
+/* Focus effect for form controls (when clicking to type) */
+.form-control:focus {
+    border-color: rgb(61, 181, 228) !important; /* Green border on focus */
+    box-shadow: 0 0 5px rgb(61, 181, 228); /* Optional: green glow on focus */
+    outline: none; /* Remove the default blue outline */
+}
+
+#formResponse {
+  color: rgb(61, 181, 228); /* Green color for response message */
+  font-weight: bold;
+}
+
+
+
+
+/* Submit button styling */
+.send-btn {
+    background-color: rgb(61, 181, 228);
+    width: 170px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgb(61, 181, 228) !important;
+    color: white;
+}
+
+/* Font boldness */
+.fw-bold {
+    font-weight: bold;
+}
+
+/* General text styles */
+p {
+    margin: 0;
+    color: #ddd;
+}
+
+/* Icon styling */
+.icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.social_icons i {
+    font-size: 1.8rem;
+    color: #333;
+    margin-left: 6px;
+    text-decoration: none;
+}
+.icon-link {
+    text-decoration: none;  /* Removes underline */
+    color: inherit;         /* Inherits the current color, preventing blue */
+  }
+.social_icons i:hover {
+    color: rgb(61, 181, 228);
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.ms-4 {
+    margin-left: 1.5rem;
+}
+
+.icon-container {
+    font-size: 1.6rem;
+    display: flex;               /* Use flexbox */
+    justify-content: center;      /* Center horizontally */
+    align-items: center;          /* Center vertically */
+    height: 50px;                /* Set a height for the container (adjust as needed) */
+    width: 50px;                 /* Set a width for the container (adjust as needed) */
+    background-color: rgb(61, 181, 228);    /* Optional: background color */
+    border-radius: 50px;           /* Optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: shadow */
+}
+
+.text_contact {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px; /* Adjusts space between text and underline */
+}
+
+.text_contact::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px; /* Adjusts the space between underline and text */
+  width: 60%; /* Adjust width as needed */
+  height: 3px; /* Thickness of the underline */
+  background-color: skyblue; /* Sky blue color for the underline */
+}
