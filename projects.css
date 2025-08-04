@@ -103,3 +103,33 @@ body {
   height: 3px; /* Thickness of the underline */
   background-color: skyblue; /* Sky blue color for the underline */
 }
+
+
+  .custom-cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    /* background-color: skyblue; */
+    border-radius: 50%;
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: 9999;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: skyblue;
+    pointer-events: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  .particle-container {
+  position: fixed; /* This is important! */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998; /* Below cursor but above page content */
+}

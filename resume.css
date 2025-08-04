@@ -34,7 +34,16 @@ body {
     pointer-events: none;
     transition: transform 0.5s ease, opacity 0.5s ease;
   }
-  
+  .particle-container {
+  position: fixed; /* This is important! */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998; /* Below cursor but above page content */
+}
+
   .nav-link {
     padding: 0 10px; /* Optional: Adjust padding for links */
   }
