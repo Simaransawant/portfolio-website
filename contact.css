@@ -162,18 +162,95 @@ p {
 .ms-4 {
     margin-left: 1.5rem;
 }
+.contact-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-section .icon-container {
+  font-size: 1.5rem;
+  padding: 12px;
+  background-color: #ffffff22;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.contact-section .text-container {
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .contact-section .icon-container {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .contact-section .text-container {
+    font-size: 0.9rem;
+  }
+
+  .contact-section .row {
+    gap: 1.5rem;
+  }
+}
 
 .icon-container {
-    font-size: 1.6rem;
-    display: flex;               /* Use flexbox */
-    justify-content: center;      /* Center horizontally */
-    align-items: center;          /* Center vertically */
-    height: 50px;                /* Set a height for the container (adjust as needed) */
-    width: 50px;                 /* Set a width for the container (adjust as needed) */
-    background-color: rgb(61, 181, 228);    /* Optional: background color */
-    border-radius: 50px;           /* Optional: rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: shadow */
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  min-width: 50px; /* Prevent shrinking on small screens */
+  background-color: rgb(61, 181, 228);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+@media (max-width: 576px) {
+  .icon-container {
+    height: 45px;
+    width: 45px;
+    font-size: 1.4rem;
+  }
+
+  .text-container p {
+    font-size: 0.95rem;
+  }
+
+  .text-container .fs-6 {
+    font-size: 1rem !important;
+  }
+}
+
+
+/* .icon-container {
+    font-size: 1.6rem;
+    display: flex;               
+    justify-content: center;      
+    align-items: center;          
+    height: 50px;               
+    width: 50px;                 
+    background-color: rgb(61, 181, 228);    
+    border-radius: 50px;           
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+} */
+/* .icon-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
 
 .text_contact {
   position: relative;

@@ -611,7 +611,7 @@ body {
 .skills-section {
   text-align: center;
   padding: 60px 0;
-  /* background: #0c0c18; */
+ 
 }
 
 .skills-section h2 {
@@ -620,12 +620,27 @@ body {
   color: #fff;
 }
 
+/* .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+ 
+  gap: 20px;
+   padding: 0 30px;
+  
+  justify-content: center !important; 
+  align-items: center !important; 
+  perspective: 1000px;
+} */
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(8, 120px);
-  grid-auto-rows: 120px;
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  padding: 0 30px;
   justify-content: center;
+  align-items: center;
+  justify-items: center; /* ✅ center .poly horizontally in grid cell */
+  align-items: center;   /* ✅ center .poly vertically in grid cell */
   perspective: 1000px;
 }
 
@@ -638,26 +653,36 @@ body {
 
 .poly {
   position: relative;
-  width: 120px;
-  height: 120px;
-  background: #0c0c18;
+  /* width: 120px; */
+  /* height: 120px; */
+  /* background: #0c0c18; */
   clip-path: polygon(
     50% 0%, 90% 15%, 100% 50%, 90% 90%,
     50% 100%, 10% 90%, 0% 50%, 10% 15%
   );
   animation: rotateWobble 3s infinite ease-in-out,
              glow 2.5s infinite alternate;
-  border: 2px solid #3b82f6;
+  /* border: 2px solid #3b82f6; */
   box-shadow:
     0 0 16px rgba(59,130,246,0.7),
     0 0 32px rgba(59,130,246,0.5),
     inset 0 0 16px rgba(59,130,246,0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
   transform-style: preserve-3d; 
   will-change: transform;
+  width: 110px;
+  height: 110px;
+  background: #0d0d0d;
+  border: 1px solid skyblue;
+  border-radius: 20px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: transform 0.3s ease; */
 }
 
-.poly {
+/* .poly {
   width: 125px;
   height: 125px;
   background: #0d0d0d;
@@ -669,15 +694,15 @@ body {
   justify-content: center;
   transition: transform 0.3s ease;
   
-}
+} */
 
 
 .poly:hover {
-  transform: scale(1.1); /* Optional zoom */
+  transform: scale(1.1); 
   z-index: 2;
 }
 
-/* Alternate bounce */
+
 .poly:nth-child(odd) {
   animation:
     rotateWobble 3s infinite ease-in-out,
@@ -692,7 +717,7 @@ body {
     jumpReverse 2.4s infinite ease-in-out;
 }
 
-/* Animation keyframes */
+
 @keyframes rotateWobble {
   0% { transform: rotate(0deg); }
   25% { transform: rotate(3deg); }
@@ -734,5 +759,87 @@ body {
   top: 20%;
   left: 20%;
   filter: drop-shadow(0 0 6px #3b82f6);
-  transform: translateZ(10px); /* Give image a 3D pop */
+  transform: translateZ(10px); 
+}
+/* @media (max-width: 1024px) {
+  .poly {
+    width: 100px;
+    height: 100px;
+  }
+
+  .poly img {
+    width: 55%;
+    height: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .poly {
+    width: 80px;
+    height: 80px;
+  }
+
+  .poly img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .poly {
+    width: 70px;
+    height: 70px;
+  }
+
+  .poly img {
+    width: 45%;
+    height: 45%;
+  }
+} */
+@media (max-width: 1024px) {
+  .poly {
+    width: 100px;
+    height: 100px;
+  }
+
+  .poly img {
+    position: absolute;
+    width: 55%;
+    height: 55%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .poly {
+    width: 80px;
+    height: 80px;
+  }
+
+  .poly img {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .poly {
+    width: 70px;
+    height: 70px;
+  }
+
+  .poly img {
+    position: absolute;
+    width: 45%;
+    height: 45%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
