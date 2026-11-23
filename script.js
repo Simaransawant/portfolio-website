@@ -1,4 +1,11 @@
-const words = ["Developer", "Designer" , "Software Tester "];
+// const words = ["Developer", "Designer" , "Software Tester "];
+const words = [
+  "QA Tester",
+  "Manual Tester",
+  "Automation Tester",
+  "API Tester",
+  "Web Developer"
+];
 let wordIndex = 0, letterIndex = 0, isDeleting = false;
 
 const typedTextElement = document.getElementById('typed-text');
